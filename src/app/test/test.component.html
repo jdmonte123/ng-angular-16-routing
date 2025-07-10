@@ -1,0 +1,34 @@
+<button id="b1" (click)="onClickHandler($event)">Button</button>
+<button id="b2" (dblclick)="onClickHandler($event)">Double Click</button>
+
+<br>
+<br>
+<h1>Welcome {{ name }}</h1>
+<button (click)="onLogin()">Login</button>
+<button (click)="onLogout()">Logout</button>
+
+<br>
+
+<input id="t1" name="t2" type="text" #myInput>
+<button (click)="onSend(myInput)">Send</button>
+<h1>{{ message }}</h1>
+
+
+<h1>{{ firstName }}</h1>
+<input type="text" [(ngModel)]="firstName">
+<br>
+<br>
+
+<textarea [(ngModel)]="textMessage" cols="30" rows="3">
+
+</textarea>
+<h2> {{140 - textMessage.length}}</h2>
+
+<h1 style="color: green">Heading</h1>
+<!-- <h1 [style.color]="specialColor">Some Heading</h1> -->
+
+<!-- <h1 [style.color]="hasError"></h1> -->
+
+<h1>Welcome {{myName}}</h1>
+<button **ngIf="!isLoggedIn" class="btn btn-primary" (click)="onLogin()"></button>
+<button **ngIf="!isLoggedOut" class="btn btn-primary" (click)="onLogout()"></button>
